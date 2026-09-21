@@ -2,6 +2,18 @@
 
 把一张或多张成年人物主图扩展成高清、多页、可复用的角色参考卡。
 
+## 效果示例：沈栀
+
+同一人物贯穿设定、细节与服装扩展三页。点击图片可查看高清预览。
+
+<p align="center">
+  <a href="examples/shen-zhi/page1-profile.jpg"><img src="examples/shen-zhi/page1-profile.jpg" alt="沈栀角色卡第 1 页：人物设定与表情" width="32%"></a>
+  <a href="examples/shen-zhi/page2-details-scenes.jpg"><img src="examples/shen-zhi/page2-details-scenes.jpg" alt="沈栀角色卡第 2 页：细节与场景" width="32%"></a>
+  <a href="examples/shen-zhi/page3-wardrobe.jpg"><img src="examples/shen-zhi/page3-wardrobe.jpg" alt="沈栀角色卡第 3 页：服装扩展" width="32%"></a>
+</p>
+
+示例原图为 3072×4608 PNG；仓库内提供 1536×2304 的 README 高清预览版。
+
 ## 核心能力
 
 - 一张主图对应一个身份，同一卡内锁定脸、发型、年龄感和身材比例。
