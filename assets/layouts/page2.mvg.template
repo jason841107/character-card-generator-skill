@@ -1,0 +1,105 @@
+push graphic-context
+fill '#f7f4ed'
+stroke none
+rectangle 0,0 3072,174
+
+font '/System/Library/Fonts/Supplemental/Songti.ttc'
+font-size 81
+font-weight 600
+fill '#211d1a'
+text 51,113 '角色参考图 · {{CHARACTER_NAME}}'
+
+font '/System/Library/Fonts/Hiragino Sans GB.ttc'
+font-size 36
+font-weight 400
+fill '#746b62'
+text-anchor end
+text 3015,105 'PAGE 02 · 细节与服装情景'
+text-anchor start
+
+fill '#181715'
+fill-opacity 0.72
+roundrectangle 114,189 339,255 8,8
+roundrectangle 114,957 339,1023 8,8
+roundrectangle 114,1686 339,1752 8,8
+roundrectangle 114,2640 444,2706 8,8
+fill-opacity 1
+fill white
+font-size 38
+font-weight 600
+text 138,236 '面部特写'
+text 138,1004 '皮肤细节'
+text 138,1733 '身体细节'
+text 138,2687 '常用服装 · 情境'
+
+fill '#181715'
+fill-opacity 0.80
+roundrectangle 18,195 96,264 8,8
+roundrectangle 630,195 708,264 8,8
+roundrectangle 1245,195 1323,264 8,8
+roundrectangle 1860,195 1938,264 8,8
+roundrectangle 2475,195 2553,264 8,8
+roundrectangle 18,969 96,1038 8,8
+roundrectangle 1548,969 1626,1038 8,8
+roundrectangle 18,1698 96,1767 8,8
+roundrectangle 630,1698 708,1767 8,8
+roundrectangle 1245,1698 1323,1767 8,8
+roundrectangle 1860,1698 1938,1767 8,8
+roundrectangle 2475,1698 2553,1767 8,8
+roundrectangle 18,2652 96,2721 8,8
+roundrectangle 630,2652 708,2721 8,8
+roundrectangle 1245,2652 1323,2721 8,8
+roundrectangle 1860,2652 1938,2721 8,8
+roundrectangle 2475,2652 2553,2721 8,8
+
+fill-opacity 1
+fill white
+font '/System/Library/Fonts/Hiragino Sans GB.ttc'
+font-size 42
+font-weight 600
+text-anchor middle
+text 57,246 '20'
+text 669,246 '21'
+text 1284,246 '22'
+text 1899,246 '23'
+text 2514,246 '24'
+text 57,1020 '25'
+text 1587,1020 '26'
+text 57,1749 '27'
+text 669,1749 '28'
+text 1284,1749 '29'
+text 1899,1749 '30'
+text 2514,1749 '31'
+text 57,2703 '32'
+text 669,2703 '33'
+text 1284,2703 '34'
+text 1899,2703 '35'
+text 2514,2703 '36'
+
+fill '#171512'
+fill-opacity 0.74
+rectangle 12,4446 606,4599
+rectangle 621,4446 1218,4599
+rectangle 1236,4446 1833,4599
+rectangle 1851,4446 2448,4599
+rectangle 2466,4446 3060,4599
+
+fill-opacity 1
+fill white
+font-size 41
+font-weight 600
+text 309,4505 '{{SCENE_1}}'
+text 920,4505 '{{SCENE_2}}'
+text 1535,4505 '{{SCENE_3}}'
+text 2150,4505 '{{SCENE_4}}'
+text 2763,4505 '{{SCENE_5}}'
+
+fill '#f4eee7'
+font-size 30
+font-weight 400
+text 309,4559 '{{OUTFIT_1}}'
+text 920,4559 '{{OUTFIT_2}}'
+text 1535,4559 '{{OUTFIT_3}}'
+text 2150,4559 '{{OUTFIT_4}}'
+text 2763,4559 '{{OUTFIT_5}}'
+pop graphic-context
