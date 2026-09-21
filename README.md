@@ -6,13 +6,25 @@
 
 同一人物贯穿设定、细节与服装扩展三页。点击图片可查看高清预览。
 
+### 第 1 页 · 人物设定与表情
+
 <p align="center">
-  <a href="examples/shen-zhi/page1-profile.jpg"><img src="examples/shen-zhi/page1-profile.jpg" alt="沈栀角色卡第 1 页：人物设定与表情" width="32%"></a>
-  <a href="examples/shen-zhi/page2-details-scenes.jpg"><img src="examples/shen-zhi/page2-details-scenes.jpg" alt="沈栀角色卡第 2 页：细节与场景" width="32%"></a>
-  <a href="examples/shen-zhi/page3-wardrobe.jpg"><img src="examples/shen-zhi/page3-wardrobe.jpg" alt="沈栀角色卡第 3 页：服装扩展" width="32%"></a>
+  <a href="examples/shen-zhi/page1-profile.jpg"><img src="examples/shen-zhi/page1-profile.jpg" alt="沈栀角色卡第 1 页：人物设定与表情" width="76%"></a>
 </p>
 
-示例原图为 3072×4608 PNG；仓库内提供 1536×2304 的 README 高清预览版。
+### 第 2 页 · 细节与场景
+
+<p align="center">
+  <a href="examples/shen-zhi/page2-details-scenes.jpg"><img src="examples/shen-zhi/page2-details-scenes.jpg" alt="沈栀角色卡第 2 页：细节与场景" width="76%"></a>
+</p>
+
+### 第 3 页 · 服装扩展
+
+<p align="center">
+  <a href="examples/shen-zhi/page3-wardrobe.jpg"><img src="examples/shen-zhi/page3-wardrobe.jpg" alt="沈栀角色卡第 3 页：服装扩展" width="76%"></a>
+</p>
+
+第 1、2 页示例原图为 3072×4608 PNG，第 3 页为 3072×6144 PNG；仓库内预览分别为 1536×2304 与 1536×3072。
 
 ## 核心能力
 
@@ -20,8 +32,11 @@
 - 服装场景保持同一人物，同时改变表情、视线、脸部角度、手部动作和姿态。
 - 默认服装页采用完整的年轻时装编辑系统：九套按三套旗袍或旗袍衍生、三套连衣裙、三套叠穿造型组织；同时强制加入宽松下装、外套造型、动态细节、运动与精致材质碰撞以及真实街头场景，限制长窄裙和传统高跟鞋的重复。
 - 不同角色卡重新建立身份锚点，避免跨卡串脸。
-- 图片主体无字生成，中文、编号和标签由本地 ImageMagick 模板排版。
-- 默认输出完整三页高清卡，尺寸为 3072×4608 PNG。
+- 图片主体无字生成，中文标题和必要标签由本地 ImageMagick 模板排版；默认不添加数字角标。
+- 第二、三页采用硬分格排版，每个服装格只出现一个人物实例；禁止镜像、倒影、模糊人物补边、重复裁切和跨格叠图。
+- 第一页保留人物设定文字；第二、三页只输出铺满画布的纯图片拼接，不添加页眉、页码、标题、标签或说明。
+- 第三页默认使用紧密的 3×3、1:2 纵向网格；高清档采用 12px 横向与 24px 纵向浅色分隔线，不保留大块空白边栏，不拉伸单图。
+- 默认输出完整三页高清卡：第一、二页为 3072×4608 PNG，第三页为 3072×6144 PNG。
 
 ## 安装
 
@@ -50,9 +65,9 @@ git clone https://github.com/jason841107/character-card-generator-skill.git \
 
 ## 清晰度
 
-- `standard`：2048×3072，整页生成。
-- `hd`：3072×4608，分组生成，默认。
-- `ultra`：4096×6144，主要分镜独立生成。
+- `standard`：第一、二页 2048×3072；第三页 2048×4096。
+- `hd`：第一、二页 3072×4608；第三页 3072×6144，默认。
+- `ultra`：第一、二页 4096×6144；第三页 4096×8192。
 
 ## 目录
 

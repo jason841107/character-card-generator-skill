@@ -43,7 +43,7 @@ When the user supplies no wardrobe reference, build every look from this recipe:
 - Create material friction with pairings such as lace and washed denim, silk and technical nylon, sheer knit and leather, compact tailoring and liquid jersey, or satin and raw fringe. A page must not read as nine smooth bodycon garments.
 - Give every look one styling friction item: a sculptural colored bag, mismatched metal jewelry, a wedge or hybrid mule, a directional boot, a leather cuff, an oversized cropped jacket, or a scarf tail. Accessories complete the silhouette instead of decorating it afterward.
 - Use coherent color stories rather than random variety. Favor acidic mint with oxblood, silver with tobacco brown, ivory with lacquer red, ink with electric cobalt, butter yellow with black, or plum with pale pink. Use a roughly 70/20/10 dominant-support-accent balance within each look.
-- Use lived-in fashion settings such as a fitting-room mirror, backstage corridor, taxi or parking garage, night convenience store, gallery stairs, elevator, rooftop lounge, hotel bathroom mirror, or rehearsal studio. Avoid repeating generic hotel lobbies and empty glamour rooftops.
+- Use lived-in fashion settings such as a fitting room with a curtain wall, backstage corridor, taxi or parking garage, night convenience store, gallery stairs, elevator corridor, rooftop lounge, compact hotel dressing area, or rehearsal studio. Keep mirrors and reflective screens out of frame. Avoid repeating generic hotel lobbies and empty glamour rooftops.
 - Balance polish with visible youth culture. On a nine-look page, include at least two relaxed or wide-bottom silhouettes, two outerwear-led looks, two motion devices such as scarf tails, fringe, feathers, or bubble hems, and three ordinary day or street contexts. Allow at most two long narrow column silhouettes and no more than three conventional high-heel looks.
 - Rotate hair finish and beauty styling without redesigning the character. Wet texture, an ear tuck, a loose tie or braid, a beret or cap, and a slicked-back finish are allowed when the recognizable cut, length, color, hairline, and face framing remain stable.
 
@@ -87,17 +87,19 @@ Default to `complete + hd` when the user gives a main image and asks for a role 
 6. Assign each wardrobe scene a different expression, gaze, head direction, hand action, and pose from the expression matrix.
 7. Before generation, reject a wardrobe plan that repeats more than three single-piece fitted dresses, lacks three layered looks on Page 3, uses more than two long narrow column silhouettes, lacks relaxed bottoms, outerwear, or motion details, overuses conventional high heels, or reuses the same color story and scene vocabulary from the preceding card.
 8. If identity, anatomy, outfit, or expression diversity drifts, regenerate only the affected panel or group.
-9. Copy selected assets into the current project's `work/` directory.
-10. Compose with ImageMagick and render real Chinese text through the matching MVG template.
-11. Save versioned PNG files into the current project's `outputs/` directory.
-12. Run file, dimension, text, identity, expression-diversity, wardrobe-taste, and thumbnail checks.
-13. Report the imagegen mode, prompt set, output paths, dimensions, and any remaining limitation.
+9. Before composition, make a panel-use map. Assign every generated raster to exactly one destination cell. Page 2 macro details must be independent detail assets, not crops copied from its five wardrobe scenes.
+10. Copy selected assets into the current project's `work/` directory.
+11. Compose Page 2 and Page 3 as tight editorial mosaics with hard-clipped rectangular cells and only hairline gutters. Preserve every source panel's aspect ratio with uniform scaling; never force a panel into a mismatched cell. Page 2 remains a 2:3 page. Page 3 uses native 1:2 portrait cells and a 1:2 page; at the HD tier, use 12px horizontal outer and internal gutters plus 24px vertical outer and internal gutters on a 3072×6144 canvas. Do not leave broad blank columns or bands. Never paste a replacement strip over a partially visible earlier strip. Never use a blurred, mirrored, enlarged, or offset copy of the person as edge fill.
+12. Render real Chinese text through the Page 1 MVG template only after its raster grid is complete. Keep Page 2 and Page 3 as text-free image collages.
+13. Save versioned PNG files into the current project's `outputs/` directory.
+14. Run file, dimension, text, identity, expression-diversity, wardrobe-taste, panel-isolation, and thumbnail checks.
+15. Report the imagegen mode, prompt set, output paths, dimensions, and any remaining limitation.
 
 ## Quality tiers
 
-- `standard`: whole-page generation; final 2048×3072 PNG.
-- `hd`: grouped generation; final 3072×4608 PNG; default.
-- `ultra`: individual major panels; final 4096×6144 PNG.
+- `standard`: whole-page generation; Page 1 and Page 2 are 2048×3072 PNG, Page 3 is 2048×4096 PNG.
+- `hd`: grouped generation; Page 1 and Page 2 are 3072×4608 PNG, Page 3 is 3072×6144 PNG; default.
+- `ultra`: individual major panels; Page 1 and Page 2 are 4096×6144 PNG, Page 3 is 4096×8192 PNG.
 
 Increasing canvas dimensions alone does not qualify as a clarity improvement. Inspect real facial, hair, skin, anatomy, and fabric detail at original size.
 
@@ -109,17 +111,22 @@ Increasing canvas dimensions alone does not qualify as a clarity improvement. In
 - Keep expressions distinct without changing eye distance, nose shape, jawline, or age impression.
 - Keep body proportions stable across outfits; fitted garments must not silently alter bust, waist, hips, shoulder width, or leg ratio.
 - Preserve natural hands, feet, joints, and garment construction.
+- Every Page 2 or Page 3 wardrobe cell contains exactly one visible instance of the character. Mirrors, reflections, screens, posters, ghosted layers, blurred edge copies, and repeated background figures count as extra instances and are forbidden.
+- Use every wardrobe scene exactly once. Do not reuse a crop of the same scene in another row, and do not leave any part of an old scene visible beneath a replacement.
+- Keep every raster inside its assigned cell. No subject, background, label, or compositing layer may bleed into a neighboring cell.
+- Page 2 and Page 3 are pure image collages. Do not add titles, page numbers, section names, scene names, outfit names, captions, label gutters, footer bars, or explanatory text.
+- Page 3 uses a tight 3×3 grid of 1:2 portrait cells with hairline separators. Generate or repair panels at the target cell ratio when possible. Scale uniformly and never stretch a source to fit; do not pillarbox it with wide empty margins.
 
 ## Typesetting
 
-Render Chinese and numbering locally after image generation. For the bundled HD templates:
+Render Chinese titles and necessary labels locally on Page 1 only. Do not add numeric badges or panel numbers. Page 2 and Page 3 must remain text-free and do not receive an MVG text overlay. For the bundled HD Page 1 template:
 
 - canvas: 3072×4608
 - serif: `/System/Library/Fonts/Supplemental/Songti.ttc`
 - sans: `/System/Library/Fonts/Hiragino Sans GB.ttc`
 - output: lossless PNG
 
-Copy the relevant `.mvg.template` into the project's `work/` directory, replace every `{{FIELD_NAME}}`, and draw it over the composed base image. Keep replacement text free of unmatched single quotes because MVG text values are single-quoted.
+Copy the Page 1 `.mvg.template` into the project's `work/` directory, replace every `{{FIELD_NAME}}`, and draw it over the composed base image. Keep replacement text free of unmatched single quotes because MVG text values are single-quoted.
 
 ## Authorization and stopping rules
 
