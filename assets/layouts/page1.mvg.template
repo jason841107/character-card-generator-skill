@@ -1,0 +1,130 @@
+push graphic-context
+fill '#f7f4ed'
+stroke none
+rectangle 0,0 738,4608
+stroke '#d9d1c5'
+stroke-width 3
+line 738,0 738,4608
+stroke none
+
+font '/System/Library/Fonts/Supplemental/Songti.ttc'
+font-size 111
+font-weight 600
+fill '#211d1a'
+text 57,162 '角色参考图'
+
+font '/System/Library/Fonts/Hiragino Sans GB.ttc'
+font-size 38
+font-weight 400
+fill '#5f5952'
+text 60,249 '同一个她 · 多面的真实'
+stroke '#b8ac9d'
+stroke-width 3
+line 57,285 675,285
+stroke none
+
+fill '#e8e2d8'
+roundrectangle 42,327 696,429 6,6
+font '/System/Library/Fonts/Supplemental/Songti.ttc'
+font-size 54
+fill '#2c2824'
+text 72,398 '基本设定'
+
+font '/System/Library/Fonts/Hiragino Sans GB.ttc'
+font-size 38
+font-weight 400
+fill '#24211f'
+text 63,516 '姓名：{{CHARACTER_NAME}}'
+text 63,588 '年龄：{{AGE}}'
+text 63,660 '身份：{{OCCUPATION}}'
+text 63,732 '性格：{{PERSONALITY_LINE_1}}'
+text 183,795 '{{PERSONALITY_LINE_2}}'
+text 63,876 '脸部轮廓：{{FACE_SHAPE}}'
+text 63,939 '眼睛形状：{{EYES}}'
+text 63,1002 '眉毛形状：{{BROWS}}'
+text 63,1065 '鼻子特征：{{NOSE}}'
+text 63,1128 '嘴唇特征：{{LIPS}}'
+text 63,1191 '头发：{{HAIR}}'
+text 63,1254 '肤色与质感：{{SKIN}}'
+text 63,1317 '身高感：{{HEIGHT}}'
+text 63,1380 '体型：{{BODY}}'
+text 63,1452 '基本服装：{{BASE_OUTFIT_LINE_1}}'
+text 183,1515 '{{BASE_OUTFIT_LINE_2}}'
+
+stroke '#c9bfb2'
+stroke-width 3
+line 63,1602 668,1602
+stroke none
+font '/System/Library/Fonts/Supplemental/Songti.ttc'
+font-size 57
+fill '#514a43'
+text 63,1710 '{{QUOTE_LINE_1}}'
+font-size 48
+fill '#6d655d'
+text 63,1788 '{{QUOTE_LINE_2}}'
+
+font '/System/Library/Fonts/Hiragino Sans GB.ttc'
+font-size 30
+fill '#9c9185'
+text 63,1928 '{{KEYWORDS}}'
+
+font '/System/Library/Fonts/Supplemental/Songti.ttc'
+font-size 81
+fill '#39342f'
+text 63,4290 '{{CHARACTER_NAME}}'
+font '/System/Library/Fonts/Hiragino Sans GB.ttc'
+font-size 30
+fill '#81786f'
+text 63,4365 '{{ROMANIZED_NAME}}'
+font-size 33
+fill '#8e857b'
+text 63,4485 'PAGE 01 · 人物设定与表情'
+
+fill '#181715'
+fill-opacity 0.80
+roundrectangle 750,21 819,90 8,8
+roundrectangle 1215,21 1284,90 8,8
+roundrectangle 1680,21 1749,90 8,8
+roundrectangle 2145,21 2214,90 8,8
+roundrectangle 2610,21 2679,90 8,8
+roundrectangle 750,1485 819,1554 8,8
+roundrectangle 1857,1485 1926,1554 8,8
+roundrectangle 2469,1485 2538,1554 8,8
+roundrectangle 1857,2175 1926,2244 8,8
+roundrectangle 2265,2175 2343,2244 8,8
+roundrectangle 2676,2175 2754,2244 8,8
+roundrectangle 750,2850 828,2919 8,8
+roundrectangle 1530,2850 1608,2919 8,8
+roundrectangle 2310,2850 2388,2919 8,8
+roundrectangle 750,3675 828,3744 8,8
+roundrectangle 1215,3675 1293,3744 8,8
+roundrectangle 1680,3675 1758,3744 8,8
+roundrectangle 2145,3675 2223,3744 8,8
+roundrectangle 2610,3675 2688,3744 8,8
+
+fill-opacity 1
+fill white
+font '/System/Library/Fonts/Hiragino Sans GB.ttc'
+font-size 42
+font-weight 600
+text-anchor middle
+text 785,72 '1'
+text 1250,72 '2'
+text 1715,72 '3'
+text 2180,72 '4'
+text 2645,72 '5'
+text 785,1536 '6'
+text 1892,1536 '7'
+text 2504,1536 '8'
+text 1892,2226 '9'
+text 2304,2226 '10'
+text 2715,2226 '11'
+text 789,2901 '12'
+text 1569,2901 '13'
+text 2349,2901 '14'
+text 789,3726 '15'
+text 1254,3726 '16'
+text 1719,3726 '17'
+text 2184,3726 '18'
+text 2649,3726 '19'
+pop graphic-context
