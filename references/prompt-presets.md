@@ -85,24 +85,32 @@ Use case: infographic-diagram. Portrait character-reference sheet. Reserve the l
 ## `PAGE_2_LAYOUT`
 
 ```text
-Use case: infographic-diagram. Portrait detail-and-wardrobe sheet. Leave a clean ivory header strip. Arrange five facial macros, two wide skin-detail panels, five body or garment details, and five equal large wardrobe scenes along the bottom. Each wardrobe scene uses the same person with a different expression, gaze, face angle, hand action, and pose. No text, numbers, logos, or watermarks.
+Use case: infographic-diagram. Text-free portrait detail-and-wardrobe collage filling the complete canvas. Arrange five facial macros, two wide skin-detail panels, five body or garment details, a clean divider gutter, and five equal large wardrobe scenes along the bottom. The upper detail grid contains true isolated macros only; do not place portrait or upper-body crops from the five wardrobe scenes above them. Each wardrobe scene appears exactly once, contains exactly one visible person, and uses a different expression, gaze, face angle, hand action, and pose. Keep every image inside its own hard-edged cell. No reserved header or footer, mirrors, reflections, screens, repeated people, overlapping layers, text, numbers, logos, or watermarks.
 ```
 
 ## `PAGE_3_LAYOUT`
 
 ```text
-Use case: infographic-diagram. Portrait wardrobe expansion sheet. Leave a clean ivory header strip. Arrange a precise three-column by three-row grid of nine full-body or nearly full-body fashion scenes. Keep identity and body proportions stable while varying outfit cut, color, fabric, environment, expression, gaze, face angle, hand action, and stance. No text, numbers, logos, or watermarks.
+Use case: infographic-diagram. Text-free portrait wardrobe collage filling the complete 1:2 canvas. Arrange a tight three-column by three-row grid of nine independent 1:2 portrait fashion scenes. Generate source panels natively at the target ratio when possible. Preserve aspect ratio with uniform scaling and never stretch a panel to fit. Use only hairline ivory separators; do not add wide blank margins, pillarboxing, header, footer, caption strip, or label area. Each cell contains exactly one visible person and one unique scene, framed to preserve the complete head, feet, outfit, and pose within the target cell ratio. Do not show mirrors, reflections, screens, posters, ghosted copies, blurred person-shaped edge fill, repeated scene crops, or content bleeding into another cell. Keep identity and body proportions stable while varying outfit cut, color, fabric, environment, expression, gaze, face angle, hand action, and stance. No text, numbers, logos, or watermarks.
+```
+
+## `PANEL_ISOLATION`
+
+Use this block for Page 2 and Page 3:
+
+```text
+One raster asset maps to one panel only. Every wardrobe panel contains exactly one visible instance of the character. A mirror image, reflection, screen image, poster, ghosted layer, blurred copy, enlarged edge-fill copy, or partially covered earlier image counts as a duplicate and must not appear. Use clean gutters and hard rectangular clipping. Keep faces, limbs, clothing, and backgrounds inside their assigned cells. Never reuse a crop of one wardrobe scene as a detail or portrait panel elsewhere on the same page.
 ```
 
 ## Style packs
 
 ### `STYLE_DAILY`
 
-Design café, fitting-room mirror, sunlit apartment, gallery stairs, neighborhood convenience store, and rehearsal-studio settings. Use compact knits layered over opaque bases, shaped sundresses with directional footwear, short modern qipao, low-slung bias skirts, and one oversized cropped layer. Include one relaxed look without turning the set into conservative casualwear.
+Design café, fitting room with a curtain wall, sunlit apartment, gallery stairs, neighborhood convenience store, and rehearsal-studio settings. Keep mirrors out of frame. Use compact knits layered over opaque bases, shaped sundresses with directional footwear, short modern qipao, low-slung bias skirts, and one oversized cropped layer. Include one relaxed look without turning the set into conservative casualwear.
 
 ### `STYLE_URBAN`
 
-Gallery opening, city street, elevator mirror, taxi back seat, parking garage, and after-hours lounge settings. Use technical corsetry, liquid jersey, low-slung skirts, sculptural knit, asymmetric dresses, strong cropped jackets, hybrid footwear, and controlled city lighting. Avoid generic office uniforms, hotel-lobby catalog poses, and repeated polished eveningwear.
+Gallery opening, city street, elevator corridor, taxi back seat, parking garage, and after-hours lounge settings. Use technical corsetry, liquid jersey, low-slung skirts, sculptural knit, asymmetric dresses, strong cropped jackets, hybrid footwear, and controlled city lighting. Avoid reflective walls, generic office uniforms, hotel-lobby catalog poses, and repeated polished eveningwear.
 
 ### `STYLE_QIPAO`
 
@@ -120,9 +128,9 @@ Across all style packs, use the wardrobe taste contract by default. Keep the vis
 
 ## Quality tiers
 
-- `standard`: whole-page generation, final 2048×3072.
-- `hd`: grouped generation, final 3072×4608, default.
-- `ultra`: individual major panels, final 4096×6144.
+- `standard`: whole-page generation; Page 1–2 final 2048×3072, Page 3 final 2048×4096.
+- `hd`: grouped generation; Page 1–2 final 3072×4608, Page 3 final 3072×6144, default.
+- `ultra`: individual major panels; Page 1–2 final 4096×6144, Page 3 final 4096×8192.
 
 For `hd`:
 
@@ -135,7 +143,7 @@ For `ultra`, generate each major full-body or wardrobe panel separately and down
 ## `NO_TEXT_NEGATIVE`
 
 ```text
-Do not add text, letters, numbers, captions, labels, logos, signatures, watermarks, interface elements, or decorative borders. Avoid duplicated faces, repeated expressions, identity drift, changing hair length, changing age, altered body proportions, extra fingers, fused hands, malformed feet, inconsistent garments, plastic skin, excessive smoothing, and false high-frequency sharpening.
+Do not add text, letters, numbers, captions, labels, logos, signatures, watermarks, interface elements, or decorative borders. Avoid duplicated faces, repeated people, mirrors, reflections, screens showing the character, ghosted layers, blurred person-shaped edge fill, repeated scene crops, panel overlap, repeated expressions, identity drift, changing hair length, changing age, altered body proportions, extra fingers, fused hands, malformed feet, inconsistent garments, plastic skin, excessive smoothing, and false high-frequency sharpening.
 ```
 
 ## Prompt assembly order
@@ -148,6 +156,7 @@ Input-image roles
 Scene and page layout
 IDENTITY_LOCK
 BODY_LOCK
+PANEL_ISOLATION for Page 2 or Page 3
 WARDROBE_TASTE_CONTRACT
 Requested outfits and settings
 EXPRESSION_MATRIX assignments

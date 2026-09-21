@@ -13,7 +13,8 @@ shasum -a 256 outputs/<final>.png
 Required results:
 
 - Decodable PNG.
-- Exact selected dimensions: 2048×3072, 3072×4608, or 4096×6144.
+- Exact selected dimensions for Page 1 and Page 2: 2048×3072, 3072×4608, or 4096×6144.
+- Exact selected dimensions for Page 3: 2048×4096, 3072×6144, or 4096×8192.
 - A recorded SHA-256 digest.
 - No accidental overwrite of an accepted earlier version.
 
@@ -84,23 +85,38 @@ When delivering multiple cards, reject a later card that repeats more than two e
 
 Check:
 
-- exact Chinese characters and punctuation
-- sequential badges 1–45 for a complete card
-- no generated fake text under the real overlay
+- Page 1 uses exact Chinese characters and punctuation
+- Page 1 has no numeric badges or panel numbers
+- Page 2 and Page 3 contain no title, page number, section name, scene name, outfit name, caption, label band, footer, generated fake text, or other explanation
 - no clipping, overlap, overflow, or mojibake
-- consistent title hierarchy and label placement
-- scene and outfit labels match the actual image
+- Page 1 keeps a consistent title hierarchy and label placement
+- Page 2 and Page 3 use tight image grids with hairline separators; reject broad empty columns, oversized gutters, pillarboxing, or unused header and footer space
+- no source panel is stretched or compressed; faces, bodies, circles, and architectural lines retain natural proportions
+
+## Panel isolation and source-use check
+
+For Page 2 and Page 3, record which source asset occupies each destination cell and confirm:
+
+- every wardrobe source is used exactly once
+- Page 2 contains true macro details above and five wardrobe scenes below; no crop from those five scenes reappears as a portrait strip or detail tile
+- Page 3 contains nine independent cells with exactly one visible person in each cell
+- Page 3 cells follow the 1:2 target ratio and retain complete heads, feet, outfits, and poses without wide side padding
+- source and destination aspect ratios match; every panel uses uniform scaling with no forced non-uniform resize
+- mirrors, reflections, screens, posters, ghosted layers, blurred person-shaped fills, and offset copies are absent
+- replacement assets fully cover their destination cells; no head, torso, garment, background, or seam from the previous asset remains visible
+- hard clipping and gutters prevent all image content from crossing into adjacent cells
+
+Reject and recompose the page when any source appears twice, any cell contains a second visible instance of the character, or a replacement reveals part of the image underneath it.
 
 ## Thumbnail check
 
 Create or inspect a 360px-wide preview. Confirm:
 
-- main title remains readable
-- page number and section names remain distinguishable
-- outfit labels remain legible enough for the intended platform
-- no face is covered by a badge or label
+- Page 1 title and profile text remain readable
+- Page 2 and Page 3 remain clean text-free collages at thumbnail size
+- panel boundaries stay clear and no face or outfit is clipped by a gutter
 
-Add vertical space or shorten labels before shrinking critical text below readability.
+Adjust Page 1 text or Page 2 and Page 3 crop geometry when thumbnail readability fails.
 
 ## Cross-card check
 
