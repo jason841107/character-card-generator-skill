@@ -9,13 +9,13 @@
 ### 第 1 页 · 人物简介、设定与表情
 
 <p align="center">
-  <a href="examples/lin-cheng/page1-profile-v2.png"><img src="examples/lin-cheng/page1-profile-v2.png" alt="林澄角色卡第 1 页：人物简介、设定与表情" width="76%"></a>
+  <a href="examples/lin-cheng/lin-cheng-page1-profile-v2.png"><img src="examples/lin-cheng/lin-cheng-page1-profile-v2.png" alt="林澄角色卡第 1 页：人物简介、设定与表情" width="76%"></a>
 </p>
 
 ### 第 2 页 · 细节与场景
 
 <p align="center">
-  <a href="examples/lin-cheng/page2-details-scenes-v2.png"><img src="examples/lin-cheng/page2-details-scenes-v2.png" alt="林澄角色卡第 2 页：细节与五套服装情景" width="76%"></a>
+  <a href="examples/lin-cheng/lin-cheng-page2-details-scenes-v2.png"><img src="examples/lin-cheng/lin-cheng-page2-details-scenes-v2.png" alt="林澄角色卡第 2 页：细节与五套服装情景" width="76%"></a>
 </p>
 
 示例第一页为 3072×5517 PNG，第二页为 3072×4608 PNG。最终画布按拼接内容确定。
