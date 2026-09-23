@@ -144,3 +144,8 @@ Deliver only files that pass [references/quality-checks.md](references/quality-c
 - the prompt mode and quality tier
 - a concise note about identity and expression-diversity checks
 - any unresolved limitation
+
+
+## Page 2 background contract
+
+For all Page 2 macro-detail and wardrobe-scene panels, use simple low-saturation neutral backgrounds (ivory, stone, cool gray, or charcoal) with consistent visual treatment for downstream video work. Keep the featured outfit distinct and colorful if desired; this restriction applies to the background. Do not place colorful garments, racks, piles, mannequins, multicolored wardrobe walls, vivid signs, neon bokeh, or busy patterns behind the subject or detail crop.
